@@ -22,9 +22,3 @@ class BasePage:
         element = WebDriverWait(self.driver, 30).until(expected_conditions.element_to_be_clickable(locator))
         return element
 
-    def wait_alert_presence(self):
-        WebDriverWait(self.driver, 10).until(expected_conditions.alert_is_present())
-
-
-    def get_URL(self):
-        return self.driver.current_url
